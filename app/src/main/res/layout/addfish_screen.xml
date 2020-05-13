@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/newbackgroung">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/background_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:lottie_fileName="background.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true" />
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/button_addFish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Fish"
+            android:textSize="20dp"
+            android:background="@drawable/round_button"
+            fontPath="fonts/Lobster_1.3.otf"
+            tools:ignore="MissingPrefix"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

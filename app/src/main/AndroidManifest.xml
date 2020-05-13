@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fordo.tushar.fishfishi">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name="com.fordo.tushar.fishfishi.StartScreenActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.fordo.tushar.fishfishi.AddFishActivity"
+            android:label="AddFishActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.fordo.tushar.fishfishi.MainGameActivity"
+            android:label="MainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.fordo.tushar.fishfishi.SellFishActivity"
+            android:label="SellFishActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.fordo.tushar.fishfishi.DeadFishActivity"
+            android:label="DeadFishActivity"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>

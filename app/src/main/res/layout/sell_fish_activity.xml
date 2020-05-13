@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/soldbc">
+
+    <Button
+        android:id="@+id/button_playagain"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="147dp"
+        android:text="Play Again"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:background="@drawable/round_button"
+        fontPath="fonts/Lobster_1.3.otf"
+        tools:ignore="MissingPrefix"/>
+
+</RelativeLayout>

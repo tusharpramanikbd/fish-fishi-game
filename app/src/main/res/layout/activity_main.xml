@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainGameActivity"
+    android:background="@drawable/newbackgroung">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/background_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true" />
+
+    <LinearLayout
+        android:id="@+id/food_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/food_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_view_food"
+            fontPath="fonts/Lobster_1.3.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Food"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            tools:ignore="MissingPrefix" />
+
+        <Button
+            android:id="@+id/button_start_pause"
+            android:layout_width="40dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_fishfood" />
+
+        <TextView
+            android:id="@+id/text_view_countdown"
+            fontPath="fonts/Lobster_1.3.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="00:00:00"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            tools:ignore="MissingPrefix" />
+
+        <TextView
+            android:id="@+id/text_view_medicine"
+            fontPath="fonts/Lobster_1.3.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Medicine"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            tools:ignore="MissingPrefix"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/button_medicine"
+            android:layout_width="40dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_fish_medicine"
+            android:visibility="invisible"/>
+        <LinearLayout
+            android:id="@+id/medicine_coin_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_medicine_coin"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_coin"
+                android:layout_gravity="left"
+                android:layout_marginLeft="18dp"
+                android:enabled="false"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/text_view_medicine_coin"
+                android:text="5"
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"
+                fontPath="fonts/Lobster_1.3.otf"
+                tools:ignore="MissingPrefix"
+                android:textColor="@android:color/black"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="left">
+
+        <LinearLayout
+            android:id="@+id/coin_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/button_coin"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_coin"
+                android:layout_gravity="left"
+                android:layout_marginLeft="18dp"
+                android:enabled="false"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/text_view_coin"
+                android:text="00"
+                android:textSize="25dp"
+                android:layout_marginLeft="10dp"
+                fontPath="fonts/Lobster_1.3.otf"
+                tools:ignore="MissingPrefix"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/healthprogress_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/health_name"
+                android:text="Health"
+                android:layout_marginLeft="10dp"
+                fontPath="fonts/Lobster_1.3.otf"
+                tools:ignore="MissingPrefix"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"/>
+
+            <ProgressBar
+                android:id="@+id/health_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:scaleY="1.5"/>
+                //android:progressDrawable="@drawable/custom_progressbar"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/grothprogress_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/groth_name"
+            android:text="Growth"
+            android:layout_marginLeft="10dp"
+            fontPath="fonts/Lobster_1.3.otf"
+            tools:ignore="MissingPrefix"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"/>
+
+        <ProgressBar
+            android:id="@+id/groth_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:scaleY="1.5"/>
+            //android:progressDrawable="@drawable/custom_progressbar"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sellfish_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/button_sellfish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sell"
+                android:textSize="20dp"
+                android:visibility="invisible"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/round_button"
+                fontPath="fonts/Lobster_1.3.otf"
+                tools:ignore="MissingPrefix"
+                android:textAllCaps="false"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
